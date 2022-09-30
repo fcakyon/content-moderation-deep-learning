@@ -5,7 +5,10 @@ Various sources for deep learning based content moderation, sensitive content de
 
 | name | paper | year | url | input modality | task | labels |
 |--- |--- |--- |--- |--- |--- |--- |
-| LSPD | [pdf](https://quanghuy0497.github.io/pdf/LSPD_IJIES.pdf) | 2022 | [page](https://sites.google.com/uit.edu.vn/LSPD) | image | image classification, instance segmentation | porn, normal, sexy, hentai, drawings, female/male genital, female breast, anus |
+| LSPD | [pdf](https://quanghuy0497.github.io/pdf/LSPD_IJIES.pdf) | 2022 | [page](https://sites.google.com/uit.edu.vn/LSPD) | image, video | image classification, instance segmentation | porn, normal, sexy, hentai, drawings, female/male genital, female breast, anus |
+| MM-Trailer | [pdf](https://aclanthology.org/2021.ranlp-1.146.pdf) | 2021 | [page](https://ritual.uh.edu/RANLP2021/) | video | video classification | age rating |
+| Movienet | [scholar](https://scholar.google.com/scholar?cluster=7273702520677604457&hl=en&as_sdt=0,5) | 2021 | [page](https://movienet.github.io/) | image, video, text | object detection, video classification | scene level actions and places, character bboxes |
+| LVU | [pdf](https://chaoyuan.org/papers/lvu.pdf) | 2021 | [page](https://chaoyuan.org/lvu/) | video | video classification | relationship, place, like ration, view count, genre, writer, year per movie scene |
 | Movie script dataset | [pdf](https://ojs.aaai.org/index.php/AAAI/article/view/3844/3722) | 2019 | [github]([pdf](https://ojs.aaai.org/index.php/AAAI/article/view/3844/3722)) | text | text classification | violent or not |
 | Nudenet | [github](https://github.com/notAI-tech/NudeNet) | 2019 | [archive.org](https://archive.org/details/NudeNet_classifier_dataset_v1) | image | image classification | nude or not |
 | Adult content dataset | [pdf](https://arxiv.org/abs/1612.09506) | 2017 | [contact](https://drive.google.com/file/d/1MrzzFxQ9t56i9d3gMAI3SaHXfVd1UUDt/view) | image | image classification | nude or not |
@@ -17,26 +20,34 @@ Various sources for deep learning based content moderation, sensitive content de
 | NDPI video dataset | [pdf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.714.5143&rep=rep1&type=pdf) | 2013 | [page](https://sites.google.com/site/pornographydatabase/) | video | video classification | porn or not |
 | HMDB-51 |--- | 2011 | [page](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#overview) | video |video classification | smoke, drink |
 
-
-
-
 ## papers
 
 ### sensitive content detection
 
-| name | paper | year | model | features | datasets | tasks |
-|--- |--- |--- |--- |--- |--- |--- |
-| --- | --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- | --- |
+| name | paper | year | model | features | datasets | tasks | context |
+|--- |--- |--- |--- |--- |--- |--- |--- |
+| Movies2Scenes: Learning Scene Representations Using Movie Similarities | [scholar](https://scholar.google.com/scholar?cluster=10458780403101083615&hl=en&as_sdt=0,5) | 2022 | ViT-like video encoder + MLP | ViT-like video encoder embedings | Private, Movienet, LVU | movie scene representation learning, video classifcation (sex, violence, drug-use) | movie scene content moderation |
+| Reliable Decision from Multiple Subtasks through Threshold Optimization: Content Moderation in the Wild | [scholar](https://scholar.google.com/scholar?cluster=6441617450690688428&hl=en&as_sdt=0,5) | 2022 | novel threshold optimization tech. (TruSThresh) | prediction scores | UnSmile (Korean hatespeech dataset) | optimum threshold prediction | social media content moderation |
+| A Case Study of Deep Learning-Based Multi-Modal Methods for Labeling the Presence of Questionable Content in Movie Trailers | [scholar](https://scholar.google.com/scholar?cluster=15170598737548453750&hl=en&as_sdt=0,5) | 2021 | multi-modal + multi output concat+MLP | CNN+LSTM video features, Bert and DeepMoji text embeddings, MFCC audio features | MM-Trailer | rating classifcation (red, yellow, green) | movie trailer content moderation |
+| On-Device Content Moderation | [scholar](https://scholar.google.com/scholar?cluster=5550217109642251291&hl=en&as_sdt=0,5) | 2021 | mobilenet v3 + SSD object detector | mobilenet v3 image embeddings | private dataset | object detection + nudity classification from images | on-device content moderation |
+| Gore Classification and Censoring in Images | [scholar](https://scholar.google.com/scholar?cluster=1477214110429045154&hl=en&as_sdt=0,5) | 2021 | ensemble of CNN + MLP | mobilenet v2, densenent, vgg16 image embeddings | private dataset | gore classification from images | general content moderation |
+| Automatic Parental Guide Scene Classification Menggunakan Metode Deep Convolutional Neural Network Dan Lstm | [scholar](https://scholar.google.com/scholar?cluster=2229349718067727385&hl=en&as_sdt=0,5) | 2020 | 3 CNN model for 3 modality, multi-label dataset | CNN video and audio embeddings, LSTM text (subitle) embeddings | private dataset | gore, nudity, drug, profanity classification from video and subtitle | movie scene content moderation |
+| Automated Censoring of Cigarettes in Videos Using Deep Learning Techniques | [scholar](https://scholar.google.com/scholar?cluster=14277066392319361311&hl=en&as_sdt=0,5) | 2020 | CNN + MLP | inception v3 image embeddings | private dataset | cigarette classification from video | general content moderation |
+| A Multimodal CNN-based Tool to Censure Inappropriate Video Scenes | [scholar](https://scholar.google.com/scholar?cluster=11897464348691991288&hl=en&as_sdt=0,5) | 2019 | SVM | InceptionV3 image embeddings, AudioVGG audio embeddings | private dataset | inappropriate (nudity+gore) classification from video | general video content moderation |
+| A baseline for NSFW video detection in e-learning environments | [scholar](https://scholar.google.com/scholar?cluster=12765316397376090724&hl=en&as_sdt=0,5) | 2019 | concat + SVM, MLP | InceptionV3 image embeddings, AudioVGG audio embeddings | YouTube8M, NDPI, Cholec80 | nudity classification from video | e-learning content moderation |
+| Hybrid System for MPAA Ratings of Movie Clips Using Support Vector Machine | [springer](https://link.springer.com/chapter/10.1007/978-981-13-1595-4_45) | 2019 | SVM | DCT features from image | private dataset | movie rating classification from images | movie content moderation |
+| Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms | [scholar](https://scholar.google.com/scholar?cluster=17864610709056312820&hl=en&as_sdt=0,5) | 2019 | CNN + LSTM (late fusion) | CNN based encoder for image, video and audio spectrograms | private dataset | video classification: orignal, fake explicit, face violent | social media content moderation |
 
-### movie scene classification
+### movie/scene genre classification
 
 | name | paper | year | model | features | datasets | tasks |
 |--- |--- |--- |--- |--- |--- |--- |
 | Effectively leveraging Multi-modal Features for Movie Genre Classification | [scholar](https://scholar.google.com/scholar?cluster=7914951466429935825&hl=en&as_sdt=0,5) | 2022 | embeddings + fusion + MLP | CLIP image embeddings, PANNs audio embeddings, CLIP text embeddings | MovieNet | movie genre classification |
 | OS-MSL: One Stage Multimodal Sequential Link Framework for Scene Segmentation and Classification | [scholar](https://scholar.google.com/scholar?cluster=12395964150974750638&hl=en&as_sdt=0,5) | 2022 | embeddings + novel transformer | ResNet-18 image embeddings, ResNet-VLAD audio embeddings | TI-News | news scene segmentation/classification (studio, outdoor, interview) |
 | Detection of Animated Scenes Among Movie Trailers | [scholar](https://scholar.google.com/scholar?cluster=6655397332509975816&hl=en&as_sdt=0,5) | 2022 | CNN + GRU | EfficientNet image embeddings | Private dataset | genre classification from movie trailer scenes |
-| Genre classification of movie trailers using 3d convolutional neural networks | [scholar](https://scholar.google.com/scholar?cluster=14452117618428848943&hl=en&as_sdt=0,5) | 2020 | 3D CNN | images | Private dataset | genre classification from movie trailer scenes |
+| A multi-label movie genre classification scheme based on the movie's subtitles | [springer](https://link.springer.com/article/10.1007/s11042-022-12961-6) | 2022 | KNN | text frequency vectors | Private dataset | genre classification from movie subtitle text |
+| A multimodal approach for multi-label movie genre classification | [scholar](https://scholar.google.com/scholar?cluster=9310008085751443571&hl=en&as_sdt=0,5) | 2020 | CNN + LSTM | MFCCs/SSD/LBP from audio, LBP/3DCNN from video frames, Inception-v3 from poster, TFIDF from text | Private dataset | genre classification from movie trailers |
+| Genre classification of movie trailers using 3d convolutional neural networks | [ieee](https://ieeexplore.ieee.org/abstract/document/9121148?casa_token=0tLUcbTpJqkAAAAA:zROsuD8jd67l4PgNTW216-prGW5k1w5wR5eYHjlhR7AGwt0Hxd1lRbUkkjPs13mie3o41DyX4vRW) | 2020 | 3D CNN | images | Private dataset | genre classification from movie trailer scenes |
 | A unified framework of deep networks for genre classification using movie trailer | [scholar](https://scholar.google.com/scholar?cluster=14452117618428848943&hl=en&as_sdt=0,5) | 2020 | CNN + LSTM | Inception V4 image embeddings | EmoGDB | genre classification from movie trailer scenes |
 | Towards story-based classification of movie scenes | [scholar](https://scholar.google.com/scholar?cluster=3605673709859574181&hl=en&as_sdt=0,5) | 2020 | logistic regression | manually extracted categorical features | Flintstones Scene Dataset | scene classification (Obstacle, Midpoint, Climax of Act 1) |
 
@@ -44,12 +55,12 @@ Various sources for deep learning based content moderation, sensitive content de
 
 | name | paper | year | model | features | datasets | tasks |
 |--- |--- |--- |--- |--- |--- |--- |
-| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | (mt) image cls., action recog., depth est. |
 | Frozen CLIP Models are Efficient Video Learners | [scholar](https://scholar.google.com/scholar?cluster=16057670792750577500&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | CLIP image embeddings | ImageNet, Kinetics, SSv2 | action recognition |
 | M&M Mix: A Multimodal Multiview Transformer Ensemble | [scholar](https://scholar.google.com/scholar?cluster=14299004100101928418&hl=en&as_sdt=0,5) | 2022 | transformer with 2 cls heads | ViT image embeddings from audio spect., frame image, optical flow | Epic-Kitchens | (mt) video/action classification |
 | OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
 | MultiMAE: Multi-modal Multi-task Masked Autoencoders | [scholar](https://scholar.google.com/scholar?cluster=7235983779434806126&hl=en&as_sdt=0,5) | 2022 | transformer with 3 decoder+ cls heads | ViT-like image enc. patch embeddings (optional modalities) | ImageNet: Pseudo labeled multi-task training dataset (depth, segm) | (mt) image cs., semantic segm., depth est. |
 | Data2vec: A general framework for self-supervised learning in speech, vision and language | [scholar](https://scholar.google.com/scholar?cluster=12686412422242429370&hl=en&as_sdt=0,5) | 2022 | single encoder | transformer based audio, text, image encoders | ImageNet, Librispeech | masked pretraining |
+| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | (mt) image cls., action recog., depth est. |
 
 ### review papers
 
