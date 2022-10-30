@@ -8,8 +8,9 @@ Various sources for deep learning based content moderation, sensitive content de
 * [techniques](https://github.com/fcakyon/content-moderation-deep-learning#techniques)
     * [sensitive content detection](https://github.com/fcakyon/content-moderation-deep-learning#sensitive-content-detection)
     * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
-    * [synchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-classification)
-    * [asynchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#asynchronous-multimodal-classification)
+    * [multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-classification)
+        * [synchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-classification)
+        * [asynchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#asynchronous-multimodal-classification)
     * [video classification](https://github.com/fcakyon/content-moderation-deep-learning#video-classification)
     * [review papers](https://github.com/fcakyon/content-moderation-deep-learning#review-papers)
 * [tools](https://github.com/fcakyon/content-moderation-deep-learning#tools)
@@ -74,21 +75,32 @@ Various sources for deep learning based content moderation, sensitive content de
 | A unified framework of deep networks for genre classification using movie trailer | [scholar](https://scholar.google.com/scholar?cluster=14452117618428848943&hl=en&as_sdt=0,5) | 2020 | CNN + LSTM | Inception V4 image embeddings | EmoGDB | genre classification from movie trailer scenes |
 | Towards story-based classification of movie scenes | [scholar](https://scholar.google.com/scholar?cluster=3605673709859574181&hl=en&as_sdt=0,5) | 2020 | logistic regression | manually extracted categorical features | Flintstones Scene Dataset | scene classification (Obstacle, Midpoint, Climax of Act 1) |
 
-### synchronous multimodal classification
+### multimodal classification
 
-| name | paper | year | model | features | datasets | tasks |
-|--- |--- |--- |--- |--- |--- |--- |
-| M&M Mix: A Multimodal Multiview Transformer Ensemble | [scholar](https://scholar.google.com/scholar?cluster=14299004100101928418&hl=en&as_sdt=0,5) | 2022 | transformer with 2 cls heads | ViT image embeddings from audio spect., frame image, optical flow | Epic-Kitchens | video/action classification |
-| MultiMAE: Multi-modal Multi-task Masked Autoencoders | [scholar](https://scholar.google.com/scholar?cluster=7235983779434806126&hl=en&as_sdt=0,5) | 2022 | transformer with 3 decoder + cls heads | ViT-like image enc. patch embeddings (optional modalities) | ImageNet: Pseudo labeled multi-task training dataset (depth, segm) | image cs., semantic segm., depth est. |
-| Data2vec: A general framework for self-supervised learning in speech, vision and language | [scholar](https://scholar.google.com/scholar?cluster=12686412422242429370&hl=en&as_sdt=0,5) | 2022 | single encoder | transformer based audio, text, image encoders | ImageNet, Librispeech | masked pretraining |
+#### synchronous multimodal classification
 
-### asynchronous multimodal classification
+| name | paper | year | model | features | datasets | tasks | modalities |
+|--- |--- |--- |--- |--- |--- |--- |--- |
+| M&M Mix: A Multimodal Multiview Transformer Ensemble | [scholar](https://scholar.google.com/scholar?cluster=14299004100101928418&hl=en&as_sdt=0,5) | 2022 | transformer with 2 cls heads | ViT image embeddings from audio spect., frame image, optical flow | Epic-Kitchens | video/action classification | image + audio + optical flow |
+| MultiMAE: Multi-modal Multi-task Masked Autoencoders | [scholar](https://scholar.google.com/scholar?cluster=7235983779434806126&hl=en&as_sdt=0,5) | 2022 | transformer with 3 decoder + cls heads | ViT-like image enc. patch embeddings (optional modalities) | ImageNet: Pseudo labeled multi-task training dataset (depth, segm) | image cs., semantic segm., depth est. | image + depth map |
+| Data2vec: A general framework for self-supervised learning in speech, vision and language | [scholar](https://scholar.google.com/scholar?cluster=12686412422242429370&hl=en&as_sdt=0,5) | 2022 | single encoder | transformer based audio, text, image encoder embeddings | ImageNet, Librispeech | masked pretraining | image + audio + text |
+| VATT: Transformers for Multimodal Self-Supervised Learning from Raw Video, Audio and Text | [scholar](https://scholar.google.com/scholar?cluster=7327595990658945420&hl=en&as_sdt=0,5) | 2022 | 1 encoder per modality | transformer based audio, text, image encoder embeddings | AudioSet, HowTo100M | pretraining + video/audio classification | image + audio + text |
+| Expanding Language-Image Pretrained Models for General Video Recognition | [scholar](https://scholar.google.com/scholar?cluster=1144066736404687657&hl=en&as_sdt=0,5) | 2022 | 1 encoder per modality | transformer based video, text encoder embeddings | HMDB-51, UCF-101 | contrastive pretraining | video + text |
+| Audio-Visual Instance Discrimination with Cross-Modal Agreement | [scholar](https://scholar.google.com/scholar?cluster=885326186401082715&hl=en&as_sdt=0,5) | 2021 | 1 encoder per modality | CNN based audio, video encoder embeddings | HMDB-51, UCF-101 | video/audio classification | video + audio |
+| Robust Audio-Visual Instance Discrimination | [scholar](https://scholar.google.com/scholar?cluster=9200438422642254466&hl=en&as_sdt=0,5) | 2021 | 1 encoder per modality | CNN based audio, video encoder embeddings | HMDB-51, UCF-101 | video/audio classification | video + audio |
+| Learning transferable visual models from natural language supervision | [scholar](https://scholar.google.com/scholar?cluster=15031020161691567042&hl=en&as_sdt=0,5) | 2021 | 1 encoder per modality | transformer based image, text encoder embeddings | JFT-300M | contrastive pretraining | image + text |
+| Self-supervised multimodal versatile networks | [scholar](https://scholar.google.com/scholar?cluster=16748353423289036473&hl=en&as_sdt=0,5) | 2020 | multiple encoders | CNN based image/audio embeddings, word2vec text embeddings | UCF101, Kinetics, AudioSet | contrastive pretraining + classification | image + audio + text |
+| Uniter: Universal image-text representation learning | [scholar](https://scholar.google.com/scholar?cluster=3224460637705754187&hl=en&as_sdt=0,5) | 2020 | multimodal encoder | combined embeddings | COCO, Visual Genome, Conceptual Captions | qa/image-text retrieval | image + text |
+| 12-in-1: Multi-task vision and language representation learning | [scholar](https://scholar.google.com/scholar?cluster=17276757515931533114&hl=en&as_sdt=0,5) | 2020 | multimodal encoder | combined embeddings | COCO, Flickr30k | qa/image-text retrieval | image + text |
+| Two-stream convolutional networks for action recognition in videos | [scholar](https://scholar.google.com/scholar?cluster=582514008712420788&hl=en&as_sdt=0,5) | 2014 | 1 encoder per modality | CNN based audio, text encoder embeddings | HMDB-51, UCF-101 | video/audio classification | video + optical flow |
 
-| name | paper | year | model | features | datasets | tasks |
-|--- |--- |--- |--- |--- |--- |--- |
-| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls. head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
-| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls. heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. |
-| Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls. heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. |
+#### asynchronous multimodal classification
+
+| name | paper | year | model | features | datasets | tasks | modalities |
+|--- |--- |--- |--- |--- |--- |--- |--- |
+| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls. head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification | image + video |
+| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls. heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. | image + video + depth map |
+| Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls. heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. | image + video + audio |
 
 ### video classification
 
