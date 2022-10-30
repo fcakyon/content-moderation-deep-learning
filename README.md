@@ -1,7 +1,22 @@
 # deep-learning-content-moderation
 Various sources for deep learning based content moderation, sensitive content detection, scene genre classification from text, audio, video &amp; image input modalities.
 
+## table of contents
+
+* [datasets](https://github.com/fcakyon/content-moderation-deep-learning#datasets)
+    * [movie and content moderation datasets](https://github.com/fcakyon/content-moderation-deep-learning#movie-and-content-moderation-datasets)
+* [techniques](https://github.com/fcakyon/content-moderation-deep-learning#techniques)
+    * [sensitive content detection](https://github.com/fcakyon/content-moderation-deep-learning#sensitive-content-detection)
+    * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
+    * [synchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-classification)
+    * [asynchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#asynchronous-multimodal-classification)
+    * [video classification](https://github.com/fcakyon/content-moderation-deep-learning#video-classification)
+    * [review papers](https://github.com/fcakyon/content-moderation-deep-learning#review-papers)
+* [tools](https://github.com/fcakyon/content-moderation-deep-learning#tools)
+
 ## datasets
+
+### movie and content moderation datasets
 
 | name | paper | year | url | input modality | task | labels |
 |--- |--- |--- |--- |--- |--- |--- |
@@ -22,7 +37,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | NDPI video dataset | [pdf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.714.5143&rep=rep1&type=pdf) | 2013 | [page](https://sites.google.com/site/pornographydatabase/) | video | video classification | porn or not |
 | HMDB-51 |--- | 2011 | [page](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#overview) | video |video classification | smoke, drink |
 
-## papers
+## techniques
 
 ### sensitive content detection
 
@@ -96,7 +111,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | Multimodal Learning with Transformers: A Survey  | [scholar](https://scholar.google.com/scholar?cluster=6631830511436466415&hl=en&as_sdt=0,5) | 2022 |
 | A Survey Paper on Movie Trailer Genre Detection | [scholar](https://scholar.google.com/scholar?cluster=18275675471389373237&hl=en&as_sdt=0,5) | 2020 |
 
-### tools
+## tools
 
 | name | url | description |
 |--- |--- |--- |
