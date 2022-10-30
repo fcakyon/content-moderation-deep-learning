@@ -59,16 +59,32 @@ Various sources for deep learning based content moderation, sensitive content de
 | A unified framework of deep networks for genre classification using movie trailer | [scholar](https://scholar.google.com/scholar?cluster=14452117618428848943&hl=en&as_sdt=0,5) | 2020 | CNN + LSTM | Inception V4 image embeddings | EmoGDB | genre classification from movie trailer scenes |
 | Towards story-based classification of movie scenes | [scholar](https://scholar.google.com/scholar?cluster=3605673709859574181&hl=en&as_sdt=0,5) | 2020 | logistic regression | manually extracted categorical features | Flintstones Scene Dataset | scene classification (Obstacle, Midpoint, Climax of Act 1) |
 
-### multimodal classification
+### synchronous multimodal classification
+
+| name | paper | year | model | features | datasets | tasks |
+|--- |--- |--- |--- |--- |--- |--- |
+| M&M Mix: A Multimodal Multiview Transformer Ensemble | [scholar](https://scholar.google.com/scholar?cluster=14299004100101928418&hl=en&as_sdt=0,5) | 2022 | transformer with 2 cls heads | ViT image embeddings from audio spect., frame image, optical flow | Epic-Kitchens | video/action classification |
+| MultiMAE: Multi-modal Multi-task Masked Autoencoders | [scholar](https://scholar.google.com/scholar?cluster=7235983779434806126&hl=en&as_sdt=0,5) | 2022 | transformer with 3 decoder + cls heads | ViT-like image enc. patch embeddings (optional modalities) | ImageNet: Pseudo labeled multi-task training dataset (depth, segm) | image cs., semantic segm., depth est. |
+| Data2vec: A general framework for self-supervised learning in speech, vision and language | [scholar](https://scholar.google.com/scholar?cluster=12686412422242429370&hl=en&as_sdt=0,5) | 2022 | single encoder | transformer based audio, text, image encoders | ImageNet, Librispeech | masked pretraining |
+
+### asynchronous multimodal classification
+
+| name | paper | year | model | features | datasets | tasks |
+|--- |--- |--- |--- |--- |--- |--- |
+| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
+| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. |
+| Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. |
+
+### video classification
 
 | name | paper | year | model | features | datasets | tasks |
 |--- |--- |--- |--- |--- |--- |--- |
 | Frozen CLIP Models are Efficient Video Learners | [scholar](https://scholar.google.com/scholar?cluster=16057670792750577500&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | CLIP image embeddings | ImageNet, Kinetics, SSv2 | action recognition |
-| M&M Mix: A Multimodal Multiview Transformer Ensemble | [scholar](https://scholar.google.com/scholar?cluster=14299004100101928418&hl=en&as_sdt=0,5) | 2022 | transformer with 2 cls heads | ViT image embeddings from audio spect., frame image, optical flow | Epic-Kitchens | (mt) video/action classification |
-| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
-| MultiMAE: Multi-modal Multi-task Masked Autoencoders | [scholar](https://scholar.google.com/scholar?cluster=7235983779434806126&hl=en&as_sdt=0,5) | 2022 | transformer with 3 decoder+ cls heads | ViT-like image enc. patch embeddings (optional modalities) | ImageNet: Pseudo labeled multi-task training dataset (depth, segm) | (mt) image cs., semantic segm., depth est. |
-| Data2vec: A general framework for self-supervised learning in speech, vision and language | [scholar](https://scholar.google.com/scholar?cluster=12686412422242429370&hl=en&as_sdt=0,5) | 2022 | single encoder | transformer based audio, text, image encoders | ImageNet, Librispeech | masked pretraining |
-| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | (mt) image cls., action recog., depth est. |
+| Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training | [scholar](https://scholar.google.com/scholar?cluster=8140812159859442226&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
+| Bevt: Bert pretraining of video transformers | [scholar](https://scholar.google.com/scholar?cluster=9527303198700083047&hl=en&as_sdt=0,5) | 2022 | encoder-decoder transformer | VideoSwin video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Is space-time attention all you need for video understanding? | [scholar](https://scholar.google.com/scholar?cluster=6828425192739736056&hl=en&as_sdt=0,5) | 2021 | transformer with 1 cls head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
+| X3d: Expanding architectures for efficient video recognition | [scholar](https://scholar.google.com/scholar?cluster=5426206565542427464&hl=en&as_sdt=0,5) | 2020 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Slowfast networks for video recognition | [scholar]https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
 
 ### review papers
 
