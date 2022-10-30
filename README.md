@@ -99,7 +99,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | Bevt: Bert pretraining of video transformers | [scholar](https://scholar.google.com/scholar?cluster=9527303198700083047&hl=en&as_sdt=0,5) | 2022 | encoder-decoder transformer | VideoSwin video enc. embeddings | Kinetics, SSv2 | action recognition |
 | Is space-time attention all you need for video understanding? | [scholar](https://scholar.google.com/scholar?cluster=6828425192739736056&hl=en&as_sdt=0,5) | 2021 | transformer with 1 cls head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
 | X3d: Expanding architectures for efficient video recognition | [scholar](https://scholar.google.com/scholar?cluster=5426206565542427464&hl=en&as_sdt=0,5) | 2020 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
-| Slowfast networks for video recognition | [scholar]https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Slowfast networks for video recognition | [scholar](https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
 
 ### review papers
 
