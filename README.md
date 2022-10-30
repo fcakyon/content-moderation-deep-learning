@@ -86,9 +86,9 @@ Various sources for deep learning based content moderation, sensitive content de
 
 | name | paper | year | model | features | datasets | tasks |
 |--- |--- |--- |--- |--- |--- |--- |
-| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
-| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. |
-| Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. |
+| OmniMAE: Single Model Masked Pretraining on Images and Videos | [scholar](https://scholar.google.com/scholar?cluster=4636381983240187321&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls. head | ViT-like image/video enc. patch embeddings | ImageNet, SSv2 | video/action classification |
+| OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls. heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. |
+| Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls. heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. |
 
 ### video classification
 
@@ -96,10 +96,11 @@ Various sources for deep learning based content moderation, sensitive content de
 |--- |--- |--- |--- |--- |--- |--- |
 | Frozen CLIP Models are Efficient Video Learners | [scholar](https://scholar.google.com/scholar?cluster=16057670792750577500&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | CLIP image embeddings | ImageNet, Kinetics, SSv2 | action recognition |
 | Videomae: Masked autoencoders are data-efficient learners for self-supervised video pre-training | [scholar](https://scholar.google.com/scholar?cluster=8140812159859442226&hl=en&as_sdt=0,5) | 2022 | transformer with 1 cls head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
-| Bevt: Bert pretraining of video transformers | [scholar](https://scholar.google.com/scholar?cluster=9527303198700083047&hl=en&as_sdt=0,5) | 2022 | encoder-decoder transformer | VideoSwin video enc. embeddings | Kinetics, SSv2 | action recognition |
-| Is space-time attention all you need for video understanding? | [scholar](https://scholar.google.com/scholar?cluster=6828425192739736056&hl=en&as_sdt=0,5) | 2021 | transformer with 1 cls head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
-| X3d: Expanding architectures for efficient video recognition | [scholar](https://scholar.google.com/scholar?cluster=5426206565542427464&hl=en&as_sdt=0,5) | 2020 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
-| Slowfast networks for video recognition | [scholar](https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with 1 cls head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Bevt: Bert pretraining of video transformers | [scholar](https://scholar.google.com/scholar?cluster=9527303198700083047&hl=en&as_sdt=0,5) | 2022 | encoder-decoder transformer | VideoSwin image/video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Video swin transformer | [scholar](https://scholar.google.com/scholar?cluster=5833041667751260373&hl=en&as_sdt=0,5) | 2022 | Swin trans. with cls.head | Swin video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Is space-time attention all you need for video understanding? | [scholar](https://scholar.google.com/scholar?cluster=6828425192739736056&hl=en&as_sdt=0,5) | 2021 | transformer with cls. head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
+| X3d: Expanding architectures for efficient video recognition | [scholar](https://scholar.google.com/scholar?cluster=5426206565542427464&hl=en&as_sdt=0,5) | 2020 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
+| Slowfast networks for video recognition | [scholar](https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
 
 ### review papers
 
