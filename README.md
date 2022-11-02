@@ -1,5 +1,6 @@
 # deep-learning-content-moderation
-Various sources for deep learning based content moderation, sensitive content detection, scene genre classification from text, audio, video &amp; image input modalities.
+
+Various sources for deep learning based content moderation, sensitive content detection, scene genre classification, nudity detection, violence detection, substance detection from text, audio, video &amp; image input modalities.
 
 ## table of contents
 
