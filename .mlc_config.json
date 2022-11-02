@@ -7,8 +7,11 @@
     ],
     "ignorePatterns": [
         {
-          "pattern": "https://github.com/fcakyon/content-moderation-deep-learning"
+            "pattern": "https://github.com/fcakyon/content-moderation-deep-learning"
+        },
+        {
+            "pattern": "https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database"
         }
     ],
-    "timeout": "20s"
+    "timeout": "10s"
 }
