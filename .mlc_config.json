@@ -9,5 +9,6 @@
         {
           "pattern": "https://github.com/fcakyon/content-moderation-deep-learning"
         }
-    ]
+    ],
+    "timeout": "20s"
 }
