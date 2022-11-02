@@ -35,7 +35,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | Violent Scenes Dataset | [springer](https://link.springer.com/article/10.1007/s11042-014-1984-4) | 2014 | [page](https://www.interdigital.com/data_sets/violent-scenes-dataset) | video | video classification | blood, fire, gun, gore, fight |
 | VSD2014 | [pdf](http://www.cp.jku.at/people/schedl/Research/Publications/pdf/schedl_cbmi_2015.pdf) | 2014 | [download](http://www.cp.jku.at/datasets/VSD2014/VSD2014.zip) | video | video classification | blood, fire, gun, gore, fight |
 | AIIA-PID4 | [pdf](https://www.igi-global.com/gateway/article/full-text-pdf/79140&riu=true) | 2013 | - | image | image classification | bikini, porn, skin, non-skin |
-| NDPI800 dataset | [pdf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.714.5143&rep=rep1&type=pdf) | 2013 | [page](https://sites.google.com/site/pornographydatabase/) | video | video classification | porn or not |
+| NDPI800 dataset | [scholar](https://scholar.google.com/scholar?cluster=7836593192753784698&hl=en&as_sdt=0,5) | 2013 | [page](https://sites.google.com/site/pornographydatabase/) | video | video classification | porn or not |
 | HMDB-51 |--- | 2011 | [page](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/#overview) | video |video classification | smoke, drink |
 
 ## techniques

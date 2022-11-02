@@ -2,6 +2,12 @@
     "aliveStatusCodes": [
         200,
         403,
-        429
+        429,
+        999
+    ],
+    "ignorePatterns": [
+        {
+          "pattern": "https://github.com/fcakyon/content-moderation-deep-learning"
+        }
     ]
 }
