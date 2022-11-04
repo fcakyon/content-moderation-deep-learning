@@ -8,6 +8,8 @@ Various sources for deep learning based content moderation, sensitive content de
     * [movie and content moderation datasets](https://github.com/fcakyon/content-moderation-deep-learning#movie-and-content-moderation-datasets)
 * [techniques](https://github.com/fcakyon/content-moderation-deep-learning#techniques)
     * [sensitive content detection](https://github.com/fcakyon/content-moderation-deep-learning#sensitive-content-detection)
+        * [movie rating](https://github.com/fcakyon/content-moderation-deep-learning#movie-rating)
+        * [content moderation](https://github.com/fcakyon/content-moderation-deep-learning#content-moderation)
     * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
     * [multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-classification)
         * [synchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-classification)
