@@ -11,10 +11,12 @@ Various sources for deep learning based content moderation, sensitive content de
         * [movie rating](https://github.com/fcakyon/content-moderation-deep-learning#movie-rating)
         * [content moderation](https://github.com/fcakyon/content-moderation-deep-learning#content-moderation)
     * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
-    * [multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-classification)
-        * [synchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-classification)
-        * [asynchronous multimodal classification](https://github.com/fcakyon/content-moderation-deep-learning#asynchronous-multimodal-classification)
-    * [video classification](https://github.com/fcakyon/content-moderation-deep-learning#video-classification)
+    * [multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-architectures)
+        * [synchronous multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-architectures)
+        * [asynchronous multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#asynchronous-multimodal-architectures)
+    * [action recognition](https://github.com/fcakyon/content-moderation-deep-learning#action-recognition)
+        * [with transformers](https://github.com/fcakyon/content-moderation-deep-learning#with-transformers)
+        * [with 3D CNNs](https://github.com/fcakyon/content-moderation-deep-learning#with-3d-cnns)
     * [review papers](https://github.com/fcakyon/content-moderation-deep-learning#review-papers)
 * [tools](https://github.com/fcakyon/content-moderation-deep-learning#tools)
 
@@ -72,7 +74,6 @@ Various sources for deep learning based content moderation, sensitive content de
 | A baseline for NSFW video detection in e-learning environments | [scholar](https://scholar.google.com/scholar?cluster=12765316397376090724&hl=en&as_sdt=0,5) | 2019 | concat + SVM, MLP | InceptionV3 image embeddings, AudioVGG audio embeddings | YouTube8M, NDPI, Cholec80 | nudity classification from video | e-learning content moderation |
 | Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms | [scholar](https://scholar.google.com/scholar?cluster=17864610709056312820&hl=en&as_sdt=0,5) | 2019 | CNN + LSTM (late fusion) | CNN based encoder for image, video and audio spectrograms | private dataset | video classification: orignal, fake explicit, fake violent | social media content moderation |
 
-
 ### movie/scene genre classification
 
 | name | paper | year | model | features | datasets | tasks |
@@ -86,9 +87,9 @@ Various sources for deep learning based content moderation, sensitive content de
 | A unified framework of deep networks for genre classification using movie trailer | [scholar](https://scholar.google.com/scholar?cluster=14452117618428848943&hl=en&as_sdt=0,5) | 2020 | CNN + LSTM | Inception V4 image embeddings | EmoGDB | genre classification from movie trailer scenes |
 | Towards story-based classification of movie scenes | [scholar](https://scholar.google.com/scholar?cluster=3605673709859574181&hl=en&as_sdt=0,5) | 2020 | logistic regression | manually extracted categorical features | Flintstones Scene Dataset | scene classification (Obstacle, Midpoint, Climax of Act 1) |
 
-### multimodal classification
+### multimodal architectures
 
-#### synchronous multimodal classification
+#### synchronous multimodal architectures
 
 | name | paper | year | model | features | datasets | tasks | modalities |
 |--- |--- |--- |--- |--- |--- |--- |--- |
@@ -105,7 +106,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | 12-in-1: Multi-task vision and language representation learning | [scholar](https://scholar.google.com/scholar?cluster=17276757515931533114&hl=en&as_sdt=0,5) | 2020 | multimodal encoder | combined embeddings | COCO, Flickr30k | qa/image-text retrieval | image + text |
 | Two-stream convolutional networks for action recognition in videos | [scholar](https://scholar.google.com/scholar?cluster=582514008712420788&hl=en&as_sdt=0,5) | 2014 | 1 encoder per modality | CNN based audio, text encoder embeddings | HMDB-51, UCF-101 | video/audio classification | video + optical flow |
 
-#### asynchronous multimodal classification
+#### asynchronous multimodal architectures
 
 | name | paper | year | model | features | datasets | tasks | modalities |
 |--- |--- |--- |--- |--- |--- |--- |--- |
@@ -113,7 +114,9 @@ Various sources for deep learning based content moderation, sensitive content de
 | OMNIVORE: A Single Model for Many Visual Modalities | [scholar](https://scholar.google.com/scholar?cluster=7775892631592466813&hl=en&as_sdt=0,5&as_ylo=2021) | 2022 | transformer with 3 cls. heads | ViT-like image/video enc. patch embeddings | ImageNet, Kinetics, SSv2, SUN RGB-D | image cls., action recog., depth est. | image + video + depth map |
 | Polyvit: Co-training vision transformers on images, videos and audio | [scholar](https://scholar.google.com/scholar?cluster=2433441885724580400&hl=en&as_sdt=0,5) | 2021 | transformer with 9 cls. heads | ViT-like image/video/audio enc. embeddings | ImageNet, CIFAR, Kinetics, Moments in Time, AudioSet, VGGSound | image cls., video cls., audio cls. | image + video + audio |
 
-### video classification
+### action recognition
+
+#### with transformers
 
 | name | paper | year | model | features | datasets | tasks |
 |--- |--- |--- |--- |--- |--- |--- |
@@ -122,8 +125,15 @@ Various sources for deep learning based content moderation, sensitive content de
 | Bevt: Bert pretraining of video transformers | [scholar](https://scholar.google.com/scholar?cluster=9527303198700083047&hl=en&as_sdt=0,5) | 2022 | encoder-decoder transformer | VideoSwin image/video enc. embeddings | Kinetics, SSv2 | action recognition |
 | Video swin transformer | [scholar](https://scholar.google.com/scholar?cluster=5833041667751260373&hl=en&as_sdt=0,5) | 2022 | Swin trans. with cls.head | Swin video enc. embeddings | Kinetics, SSv2 | action recognition |
 | Is space-time attention all you need for video understanding? | [scholar](https://scholar.google.com/scholar?cluster=6828425192739736056&hl=en&as_sdt=0,5) | 2021 | transformer with cls. head | ViT-like video enc. patch embeddings | Kinetics, SSv2 | action recognition |
+
+#### with 3D CNNs
+
+| name | paper | year | model | features | datasets | tasks |
+|--- |--- |--- |--- |--- |--- |--- |
 | X3d: Expanding architectures for efficient video recognition | [scholar](https://scholar.google.com/scholar?cluster=5426206565542427464&hl=en&as_sdt=0,5) | 2020 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
 | Slowfast networks for video recognition | [scholar](https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
+| A closer look at spatiotemporal convolutions for action recognition (R2+1D) | [scholar](https://scholar.google.com/scholar?cluster=9524036545693727210&hl=en&as_sdt=0,5) | 2018 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, HMDB-51, UCF-101 | action recognition |
+| Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset (I3D) | [scholar](https://scholar.google.com/scholar?cluster=9581219496538221166&hl=en&as_sdt=0,5) | 2017 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, HMDB-51, UCF-101 | action recognition |
 
 ### review papers
 
