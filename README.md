@@ -17,6 +17,7 @@ Various sources for deep learning based content moderation, sensitive content de
     * [action recognition](https://github.com/fcakyon/content-moderation-deep-learning#action-recognition)
         * [with transformers](https://github.com/fcakyon/content-moderation-deep-learning#with-transformers)
         * [with 3D CNNs](https://github.com/fcakyon/content-moderation-deep-learning#with-3d-cnns)
+    * [contrastive representation learning](https://github.com/fcakyon/content-moderation-deep-learning#contrastive-representation-learning)
     * [review papers](https://github.com/fcakyon/content-moderation-deep-learning#review-papers)
 * [tools](https://github.com/fcakyon/content-moderation-deep-learning#tools)
 
@@ -134,6 +135,13 @@ Various sources for deep learning based content moderation, sensitive content de
 | Slowfast networks for video recognition | [scholar](https://scholar.google.com/scholar?cluster=1892562522989461632&hl=en&as_sdt=0,5) | 2019 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, SSv2 | action recognition |
 | A closer look at spatiotemporal convolutions for action recognition (R2+1D) | [scholar](https://scholar.google.com/scholar?cluster=9524036545693727210&hl=en&as_sdt=0,5) | 2018 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, HMDB-51, UCF-101 | action recognition |
 | Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset (I3D) | [scholar](https://scholar.google.com/scholar?cluster=9581219496538221166&hl=en&as_sdt=0,5) | 2017 | CNN with cls. head | 3D CNN based video enc. embeddings | Kinetics, HMDB-51, UCF-101 | action recognition |
+
+### contrastive representation learning
+
+| name | paper | date |
+|--- |--- |--- |
+| Vatt: Transformers for multimodal self-supervised learning from raw video, audio and text | [scholar](https://scholar.google.com.tr/scholar?cluster=7327595990658945420) | 2021 |
+| Supervised contrastive learning | [scholar](https://scholar.google.com.tr/scholar?cluster=2159203708190499110) | 2020 |
 
 ### review papers
 
