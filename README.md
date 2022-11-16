@@ -152,3 +152,6 @@ Various sources for deep learning based content moderation, sensitive content de
 | better-profanity | [github](https://github.com/snguyenthanh/better_profanity) | fast swear word detection from strings |
 | PySceneDetect | [github](https://github.com/Breakthrough/PySceneDetect) | Python and OpenCV-based scene cut/transition detection program & library |
 | LAION safety toolkit | [github](https://github.com/LAION-AI/LAION-SAFETY) | NSFW detector trained on LAION dataset |
+| pysrt | [github](https://github.com/byroot/pysrt) | Python parser for SubRip (srt) files |
+| ffsubsync | [github](https://github.com/smacke/ffsubsync) | Automagically synchronize subtitles with video. |
+| MoviePy | [github](https://github.com/Zulko/moviepy) | Video editing with Python |
