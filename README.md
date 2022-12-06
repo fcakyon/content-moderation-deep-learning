@@ -27,7 +27,7 @@ Various sources for deep learning based content moderation, sensitive content de
 
 | name | paper | year | url | input modality | task | labels |
 |--- |--- |--- |--- |--- |--- |--- |
-| LSPD | [pdf](https://quanghuy0497.github.io/pdf/LSPD_IJIES.pdf) | 2022 | [page](https://sites.google.com/uit.edu.vn/LSPD) | image, video | image/video classification, instance segmentation | porn, normal, sexy, hentai, drawings, female/male genital, female breast, anus |
+| LSPD | [pdf](https://inass.org/wp-content/uploads/2021/09/2022022819-4.pdf) | 2022 | [page](https://sites.google.com/uit.edu.vn/LSPD) | image, video | image/video classification, instance segmentation | porn, normal, sexy, hentai, drawings, female/male genital, female breast, anus |
 | MM-Trailer | [pdf](https://aclanthology.org/2021.ranlp-1.146.pdf) | 2021 | [page](https://ritual.uh.edu/RANLP2021/) | video | video classification | age rating |
 | Movienet | [scholar](https://scholar.google.com/scholar?cluster=7273702520677604457&hl=en&as_sdt=0,5) | 2021 | [page](https://movienet.github.io/) | image, video, text | object detection, video classification | scene level actions and places, character bboxes |
 | Movie script severity dataset | [pdf](https://arxiv.org/pdf/2109.09276.pdf) | 2021 | [github](https://github.com/RiTUAL-UH/Predicting-Severity-in-Movie-Scripts) | text | text classification | frightening, mild, moderate, severe |
