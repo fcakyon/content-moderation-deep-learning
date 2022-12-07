@@ -8,7 +8,7 @@ Various sources for deep learning based content moderation, sensitive content de
     * [movie and content moderation datasets](https://github.com/fcakyon/content-moderation-deep-learning#movie-and-content-moderation-datasets)
 * [techniques](https://github.com/fcakyon/content-moderation-deep-learning#techniques)
     * [sensitive content detection](https://github.com/fcakyon/content-moderation-deep-learning#sensitive-content-detection)
-        * [movie rating](https://github.com/fcakyon/content-moderation-deep-learning#movie-rating)
+        * [movie content rating](https://github.com/fcakyon/content-moderation-deep-learning#movie-rating)
         * [content moderation](https://github.com/fcakyon/content-moderation-deep-learning#content-moderation)
     * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
     * [multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-architectures)
@@ -48,7 +48,7 @@ Various sources for deep learning based content moderation, sensitive content de
 
 ### sensitive content detection
 
-#### movie rating
+#### movie content rating
 
 | name | paper | year | model | features | datasets | tasks | context |
 |--- |--- |--- |--- |--- |--- |--- |--- |
@@ -60,7 +60,7 @@ Various sources for deep learning based content moderation, sensitive content de
 | Automatic Parental Guide Scene Classification Menggunakan Metode Deep Convolutional Neural Network Dan Lstm | [scholar](https://scholar.google.com/scholar?cluster=2229349718067727385&hl=en&as_sdt=0,5) | 2020 | 3 CNN model for 3 modality, multi-label dataset | CNN video and audio embeddings, LSTM text (subitle) embeddings | private dataset | gore, nudity, drug, profanity classification from video and subtitle | movie scene content rating |
 | Multimodal data fusion for sensitive scene localization | [scholar](https://scholar.google.com/scholar?cluster=16351890771413386481&hl=en&as_sdt=0,5) | 2019 | meta-learning with Naive Bayes, SVM | MFCC and  prosodic features from audio, HOG and TRoF features from images | Pornography-2k dataset, VSD2014 | violent and pornographic scene localization from video | movie scene content rating |
 | A Deep Learning approach for the Motion Picture Content Rating | [scholar](https://scholar.google.com/scholar?cluster=14110689052300247206&hl=en&as_sdt=0,5) | 2019 | MLP + rule-based decision | InceptionV3 image embeddings | Violent Scenes Dataset, private dataset | violence (shooting, blood, fire, weapon) classification from video | movie scene content rating |
-| Hybrid System for MPAA Ratings of Movie Clips Using Support Vector Machine | [springer](https://link.springer.com/chapter/10.1007/978-981-13-1595-4_45) | 2019 | SVM | DCT features from image | private dataset | movie rating classification from images | movie content rating |
+| Hybrid System for MPAA Ratings of Movie Clips Using Support Vector Machine | [springer](https://link.springer.com/chapter/10.1007/978-981-13-1595-4_45) | 2019 | SVM | DCT features from image | private dataset | movie content rating classification from images | movie content rating |
 | Inappropriate scene detection in a video stream | [page](http://dspace.bracu.ac.bd/xmlui/handle/10361/9469) | 2017 | SVM classifier + Lenet image classifier + rules-based decision | HoG and CNN features for image | private dataset | image classification: no/mild/high violence, safe/unsafe/pornoghraphy | movie frame content rating |
 
 #### content moderation
