@@ -2,6 +2,20 @@
 
 Various sources for deep learning based content moderation, sensitive content detection, scene genre classification, nudity detection, violence detection, substance detection from text, audio, video &amp; image input modalities.
 
+## citation
+
+If you find this source useful, please consider citing it in your work as:
+
+```
+@article{akyon2022contentmoderation,
+  title={Deep Architectures for Content Moderation and Movie Content Rating},
+  author={Akyon, Fatih Cagatay and Temizel, Alptekin},
+  journal={arXiv},
+  doi={https://doi.org/10.48550/arXiv.2212.04533},
+  year={2022}
+}
+```
+
 ## table of contents
 
 * [datasets](https://github.com/fcakyon/content-moderation-deep-learning#datasets)
