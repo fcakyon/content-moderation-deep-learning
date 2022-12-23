@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+preferred-citation:
+  type: article
+  title: Deep Architectures for Content Moderation and Movie Content Rating
+  doi: https://doi.org/10.48550/arXiv.2212.04533
+  url: https://arxiv.org/abs/2212.04533
+  journal: arXiv
+  message: "If you use this source in your work, please consider citing it."
+  authors:
+  - family-names: "Akyon"
+    given-names: "Fatih Cagatay"
+  - family-names: "Temizel"
+    given-names: "Alptekin"
+  year: 2022
