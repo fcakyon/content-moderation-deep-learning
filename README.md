@@ -6,7 +6,17 @@ Various sources for deep learning based content moderation, sensitive content de
 
 If you find this source useful, please consider citing it in your work as:
 
+```bib
+@INPROCEEDINGS{10193621,
+  author={Akyon, Fatih Cagatay and Temizel, Alptekin},
+  booktitle={2023 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)}, 
+  title={State-of-the-Art in Nudity Classification: A Comparative Analysis}, 
+  year={2023},
+  pages={1-5},
+  keywords={Analytical models;Convolution;Conferences;Transfer learning;Benchmark testing;Transformers;Safety;content moderation;nudity detection;safety;transformers},
+  doi={10.1109/ICASSPW59220.2023.10193621}}
 ```
+```bib
 @article{akyon2022contentmoderation,
   title={Deep Architectures for Content Moderation and Movie Content Rating},
   author={Akyon, Fatih Cagatay and Temizel, Alptekin},
@@ -81,6 +91,7 @@ If you find this source useful, please consider citing it in your work as:
 
 | name | paper | year | model | features | datasets | tasks | context |
 |--- |--- |--- |--- |--- |--- |--- |--- |
+| State-of-the-Art in Nudity Classification: A Comparative Analysis | [ieee](https://ieeexplore.ieee.org/document/10193621) | 2023 | CNN, Transformers | EfficientNet, ViT, ConvNeXT image embeddings | LSPD, Nudenet, NDPI2k | nudity classification from images | general content moderation |
 | Reliable Decision from Multiple Subtasks through Threshold Optimization: Content Moderation in the Wild | [scholar](https://scholar.google.com/scholar?cluster=6441617450690688428&hl=en&as_sdt=0,5) | 2022 | novel threshold optimization tech. (TruSThresh) | prediction scores | UnSmile (Korean hatespeech dataset) | optimum threshold prediction | social media content moderation |
 | On-Device Content Moderation | [scholar](https://scholar.google.com/scholar?cluster=5550217109642251291&hl=en&as_sdt=0,5) | 2021 | mobilenet v3 + SSD object detector | mobilenet v3 image embeddings | private dataset | object detection + nudity classification from images | on-device content moderation |
 | Gore Classification and Censoring in Images | [scholar](https://scholar.google.com/scholar?cluster=1477214110429045154&hl=en&as_sdt=0,5) | 2021 | ensemble of CNN + MLP | mobilenet v2, densenent, vgg16 image embeddings | private dataset | gore classification from images | general content moderation |
@@ -171,7 +182,7 @@ If you find this source useful, please consider citing it in your work as:
 
 | name | url | description |
 |--- |--- |--- |
-| better-profanity | [github](https://github.com/snguyenthanh/better_profanity) | fast swear word detection from strings |
+| safetext | [github](https://github.com/safevideo/safetext) | multilingual swear word detection and filtering from strings |
 | PySceneDetect | [github](https://github.com/Breakthrough/PySceneDetect) | Python and OpenCV-based scene cut/transition detection program & library |
 | LAION safety toolkit | [github](https://github.com/LAION-AI/LAION-SAFETY) | NSFW detector trained on LAION dataset |
 | pysrt | [github](https://github.com/byroot/pysrt) | Python parser for SubRip (srt) files |
