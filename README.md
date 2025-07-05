@@ -182,7 +182,7 @@ If you find this source useful, please consider citing it in your work as:
 
 | name | url | description |
 |--- |--- |--- |
-| safetext | [github](https://github.com/safevideo/safetext) | multilingual swear word detection and filtering from strings |
+| safetext | [github](https://github.com/viddexa/safetext) | multilingual swear word detection and filtering |
 | PySceneDetect | [github](https://github.com/Breakthrough/PySceneDetect) | Python and OpenCV-based scene cut/transition detection program & library |
 | LAION safety toolkit | [github](https://github.com/LAION-AI/LAION-SAFETY) | NSFW detector trained on LAION dataset |
 | pysrt | [github](https://github.com/byroot/pysrt) | Python parser for SubRip (srt) files |
