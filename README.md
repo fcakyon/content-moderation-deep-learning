@@ -34,6 +34,7 @@ If you find this source useful, please consider citing it in your work as:
     * [sensitive content detection](https://github.com/fcakyon/content-moderation-deep-learning#sensitive-content-detection)
         * [movie content rating](https://github.com/fcakyon/content-moderation-deep-learning#movie-content-rating)
         * [content moderation](https://github.com/fcakyon/content-moderation-deep-learning#content-moderation)
+        * [animal cruelty and wildlife crime detection](https://github.com/fcakyon/content-moderation-deep-learning#animal-cruelty-and-wildlife-crime-detection)
     * [movie/scene genre classification](https://github.com/fcakyon/content-moderation-deep-learning#movie/scene-genre-classification)
     * [multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#multimodal-architectures)
         * [synchronous multimodal architectures](https://github.com/fcakyon/content-moderation-deep-learning#synchronous-multimodal-architectures)
@@ -99,6 +100,33 @@ If you find this source useful, please consider citing it in your work as:
 | A Multimodal CNN-based Tool to Censure Inappropriate Video Scenes | [scholar](https://scholar.google.com/scholar?cluster=11897464348691991288&hl=en&as_sdt=0,5) | 2019 | CNN + SVM | InceptionV3 image embeddings, AudioVGG audio embeddings | private dataset | inappropriate (nudity+gore) classification from video | general video content moderation |
 | A baseline for NSFW video detection in e-learning environments | [scholar](https://scholar.google.com/scholar?cluster=12765316397376090724&hl=en&as_sdt=0,5) | 2019 | concat + SVM, MLP | InceptionV3 image embeddings, AudioVGG audio embeddings | YouTube8M, NDPI, Cholec80 | nudity classification from video | e-learning content moderation |
 | Bringing the kid back into youtube kids: Detecting inappropriate content on video streaming platforms | [scholar](https://scholar.google.com/scholar?cluster=17864610709056312820&hl=en&as_sdt=0,5) | 2019 | CNN + LSTM (late fusion) | CNN based encoder for image, video and audio spectrograms | private dataset | video classification: orignal, fake explicit, fake violent | social media content moderation |
+
+#### animal cruelty and wildlife crime detection
+
+Papers and tools for detecting animal cruelty content and illegal wildlife trade in images, video, and social media posts. This includes detection of wildlife trafficking imagery, identification of illegal wildlife products for sale online, and automated monitoring of animal abuse content on social media platforms.
+
+##### illegal wildlife trade detection
+
+| name | paper | year | model | features | datasets | tasks | context |
+|--- |--- |--- |--- |--- |--- |--- |--- |
+| A Cost-Effective LLM-based Approach to Identify Wildlife Trafficking in Online Marketplaces | [acm](https://dl.acm.org/doi/10.1145/3725256) | 2025 | LLM pseudo-labeling + specialized classifiers | LLM-generated pseudo labels, text and image features | online marketplace listings | wildlife trafficking listing classification (up to 95% F1) | online marketplace content moderation |
+| Descriptive Analysis of Online Wildlife Products Using Vision Language Models | [acm](https://dl.acm.org/doi/10.1145/3715335.3735484) | 2025 | VLM + LLM pipeline | vision-language model embeddings | online wildlife product advertisements | product type, species, and IUCN/CITES status identification | online marketplace content moderation |
+| Detection of trade in products derived from threatened species using machine learning and a smartphone | [arxiv](https://arxiv.org/abs/2509.06585) | 2025 | object recognition models | image features from elephant, pangolin, tiger products | wildlife product images | wildlife product detection and localization (91.3% accuracy on smartphone) | field and online detection |
+| Unlocking the power of artificial intelligence for pangolin protection: Revolutionizing wildlife conservation with enhanced deep learning models | [sciencedirect](https://www.sciencedirect.com/science/article/abs/pii/S0957417424030732) | 2024 | enhanced YOLOv8 with BiFPN + Triplet Attention | YOLOv8 image embeddings with attention mechanisms | pangolin image dataset | pangolin detection (87.0% mAP, 14.3 MB model) | wildlife trade monitoring |
+| Detecting wildlife trafficking in images from online platforms: A test case using deep learning with pangolin images | [sciencedirect](https://www.sciencedirect.com/science/article/pii/S0006320723000058) | 2023 | fine-tuned CNNs | CNN image embeddings (iNaturalist, Flickr, Google images) | pangolin trade imagery | trade context classification (>90% detection rate) | online platform content moderation |
+| Towards automatic detection of wildlife trade using machine vision models | [sciencedirect](https://www.sciencedirect.com/science/article/pii/S0006320723000241) | 2023 | DNNs (5 architectures, 3 training methods) | DNN image embeddings | exotic pet trade images (24 models trained) | exotic pet sale detection (f-score >0.95 in-distribution) | online platform content moderation |
+| Detecting illegal wildlife trafficking via real time tomography 3D X-ray imaging and automated algorithms | [frontiers](https://www.frontiersin.org/journals/conservation-science/articles/10.3389/fcosc.2022.757950/full) | 2022 | 3D X-ray CT + computer algorithms | 3D X-ray tomography features | 294 scans from 13 species (lizards, birds, fish) | wildlife detection in luggage (82% detection, 1.6% false alarm) | border security screening |
+| Use of Machine Learning to Detect Wildlife Product Promotion and Sales on Twitter | [frontiers](https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2019.00028/full) | 2019 | unsupervised topic model + keyword filtering | text features from tweets | 138,357 tweets | wildlife product sale detection on social media | social media content moderation |
+
+##### wildlife monitoring and conservation
+
+| name | paper | year | model | features | datasets | tasks | context |
+|--- |--- |--- |--- |--- |--- |--- |--- |
+| Generative AI Against Poaching: Latent Composite Flow Matching for Wildlife Conservation | [arxiv](https://arxiv.org/abs/2508.14342) | 2025 | WildFlow (flow matching + occupancy model) | latent space representations with prior knowledge injection | datasets from two national parks in Uganda | poaching prediction under observation bias and data scarcity | anti-poaching surveillance |
+| Pig aggression classification using CNN, Transformers and Recurrent Networks | [arxiv](https://arxiv.org/abs/2403.08528) | 2024 | TimeSformer, ViViT, ResNet3D, CnnLstm | transformer and CNN video embeddings | pig behavior video dataset | aggressive/non-aggressive behavior classification (0.729 median accuracy) | livestock welfare monitoring |
+| Perspectives in machine learning for wildlife conservation | [nature](https://www.nature.com/articles/s41467-022-27980-y) | 2022 | survey of ML approaches | various (CNN, transformer, acoustic models) | various wildlife datasets | detection, tracking, counting, behavior analysis | wildlife conservation review |
+| A framework for investigating illegal wildlife trade on social media with machine learning | [wiley](https://conbio.onlinelibrary.wiley.com/doi/full/10.1111/cobi.13104) | 2019 | ML pipeline (mining, filtering, identification) | deep learning image filters, NLP text features | social media data | illegal wildlife trade investigation pipeline | social media content moderation |
+| Machine learning for tracking illegal wildlife trade on social media | [nature](https://www.nature.com/articles/s41559-018-0466-x) | 2018 | deep neural networks | DNN image and text embeddings | Twitter data (rhino-related posts, 19 languages) | automated wildlife trade monitoring on social media (>90% image filtering) | social media content moderation |
 
 ### movie/scene genre classification
 
@@ -188,3 +216,6 @@ If you find this source useful, please consider citing it in your work as:
 | pysrt | [github](https://github.com/byroot/pysrt) | Python parser for SubRip (srt) files |
 | ffsubsync | [github](https://github.com/smacke/ffsubsync) | Automagically synchronize subtitles with video. |
 | MoviePy | [github](https://github.com/Zulko/moviepy) | Video editing with Python |
+| WildlifeVLM | [github](https://github.com/kinshuk1207/wildlifevlm) | Vision-language model pipeline for analyzing online wildlife product advertisements |
+| PyTorch-Wildlife | [github](https://github.com/microsoft/CameraTraps) | Microsoft's collaborative deep learning framework for wildlife conservation (MegaDetector, species classification) |
+| TrailGuard AI | [page](https://www.resolve.ngo/projects/trailguard-ai-and-nightjar) | Intel/RESOLVE AI-powered camera trap for real-time poacher and wildlife detection with on-device deep learning |
