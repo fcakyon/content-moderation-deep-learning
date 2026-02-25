@@ -11,6 +11,9 @@
         },
         {
             "pattern": "https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database"
+        },
+        {
+            "pattern": "https://www.sciencedirect.com"
         }
     ],
     "timeout": "20s"
