@@ -7,6 +7,15 @@ Various sources for deep learning based content moderation, sensitive content de
 If you find this source useful, please consider citing it in your work as:
 
 ```bib
+@inproceedings{akyon2026senben,
+  title={SenBen: Sensitive Scene Graphs for Explainable Content Moderation},
+  author={Akyon, Fatih Cagatay and Temizel, Alptekin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+  year={2026},
+  url={https://arxiv.org/abs/2604.08819}
+}
+```
+```bib
 @INPROCEEDINGS{10193621,
   author={Akyon, Fatih Cagatay and Temizel, Alptekin},
   booktitle={2023 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW)}, 
@@ -52,6 +61,7 @@ If you find this source useful, please consider citing it in your work as:
 
 | name | paper | year | url | input modality | task | labels |
 |--- |--- |--- |--- |--- |--- |--- |
+| SenBen | [arxiv](https://arxiv.org/abs/2604.08819) | 2026 | [hf](https://huggingface.co/datasets/fcakyon/senben) | image | grounded scene graph generation, sensitive content classification | 16 sensitive content tags with grounded object boxes and scene captions over movie frames |
 | LSPD | [pdf](https://inass.org/wp-content/uploads/2021/09/2022022819-4.pdf) | 2022 | [page](https://sites.google.com/uit.edu.vn/LSPD) | image, video | image/video classification, instance segmentation | porn, normal, sexy, hentai, drawings, female/male genital, female breast, anus |
 | MM-Trailer | [pdf](https://aclanthology.org/2021.ranlp-1.146.pdf) | 2021 | [page](https://web.archive.org/web/2023/https://ritual.uh.edu/RANLP2021/) | video | video classification | age rating |
 | Movienet | [scholar](https://scholar.google.com/scholar?cluster=7273702520677604457&hl=en&as_sdt=0,5) | 2021 | [page](https://movienet.github.io/) | image, video, text | object detection, video classification | scene level actions and places, character bboxes |
@@ -92,6 +102,7 @@ If you find this source useful, please consider citing it in your work as:
 
 | name | paper | year | model | features | datasets | tasks | context |
 |--- |--- |--- |--- |--- |--- |--- |--- |
+| SenBen: Sensitive Scene Graphs for Explainable Content Moderation | [arxiv](https://arxiv.org/abs/2604.08819) | 2026 | Florence-2 student (241M) | Florence-2 vision-language embeddings | SenBen (13,999 movie frames) | grounded sensitive scene graph generation (16-tag classification + object grounding + captioning) from movie frames | explainable content moderation, benchmark of frontier VLMs and safety classifiers |
 | State-of-the-Art in Nudity Classification: A Comparative Analysis | [ieee](https://ieeexplore.ieee.org/document/10193621) | 2023 | CNN, Transformers | EfficientNet, ViT, ConvNeXT image embeddings | LSPD, Nudenet, NDPI2k | nudity classification from images | general content moderation |
 | Reliable Decision from Multiple Subtasks through Threshold Optimization: Content Moderation in the Wild | [scholar](https://scholar.google.com/scholar?cluster=6441617450690688428&hl=en&as_sdt=0,5) | 2022 | novel threshold optimization tech. (TruSThresh) | prediction scores | UnSmile (Korean hatespeech dataset) | optimum threshold prediction | social media content moderation |
 | On-Device Content Moderation | [scholar](https://scholar.google.com/scholar?cluster=5550217109642251291&hl=en&as_sdt=0,5) | 2021 | mobilenet v3 + SSD object detector | mobilenet v3 image embeddings | private dataset | object detection + nudity classification from images | on-device content moderation |
